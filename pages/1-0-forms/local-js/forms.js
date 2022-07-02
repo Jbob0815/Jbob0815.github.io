@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
             cs.transitionTimingFunction = `cubic-bezier(.44,-0.02,.84,.43)`; 
         };       
         
-        if(code.value.length >= 8){
+        if(code.value.length >= 10){
             submit.disabled = false;
             submit.style.cursor = `help`;
         } else {
-            submit.cursor = pointer;
+            submit.cursor = "pointer";
             submit.disabled = true;
         };
         

@@ -19,13 +19,13 @@ h1 {
     text-align: center;
     color: white;
     font-family: serif;
-    
+    font-size: 2rem;
 }
 
 body {
     margin: 0;
     background-color: var(--blue);
-    background-image: url(pages/1-0-forms/images/jellyfishtr.png);
+    background-image: url("../images/jellyfishtr.png");
     background-size: 20% ;
     position: relative;
     overflow: hidden;
@@ -45,7 +45,7 @@ body {
     background-color: var(--orange);
     border: none;
     border-radius: 5px;
-    width: 200; 
+    width: 200px;
     color: white;
     transition: 100ms;
 }
@@ -62,7 +62,7 @@ body {
     background-color: var(--orange);
     border: none;
     border-radius: 5px;
-    width: 200;
+    width: 200px;
     transition: 140ms;
     transform-origin: right top;
 }
@@ -73,7 +73,7 @@ body {
     font-size: 15px;
     border: none;
     border-radius: 5px;
-    width: 100;
+    width: 100px;
     height: 30px;
     margin-top: 5%;
     margin-left: 50px;
