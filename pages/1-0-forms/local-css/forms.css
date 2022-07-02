@@ -31,8 +31,6 @@ body {
     overflow: hidden;
 }
 
-
-
 .form {
     position: absolute;
     transform: translate(-50%,-50%);
@@ -54,7 +52,6 @@ body {
     border:none;
     outline: var(--red) solid 1px;
 }
-
 
 .code {
     margin-top: 5%;

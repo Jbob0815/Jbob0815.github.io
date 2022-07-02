@@ -1,0 +1,51 @@
+@font-face {
+    font-family: Cosolas;
+    src: url("../../../global/fonts/Consolas.ttf");
+}
+
+body {
+    background: linear-gradient(to bottom, #0083c9,white);
+    height: 100vh;
+    align-content: center;
+    text-align: center;
+}
+
+a {
+    margin-inline: 2vw;
+    text-decoration: none;
+    display: flex;
+    float: right;
+    font-size: 2em;
+    color: white;
+    font-family: Consolas;
+
+}
+
+.about_me {
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-content: center;
+    width: 50vw;
+    left: 50%;
+    top: 20vh;
+    transform: translate(-50%,0);
+}
+
+p {
+    font-family: Consolas;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 6ch;
+    position: relative;
+}
+
+img {
+    width: 8vh;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 2vw;
+}
