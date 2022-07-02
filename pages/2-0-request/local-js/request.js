@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
        document.querySelector('.data').innerHTML  = `
        <div class="img">
-       <img src="Profile_avatar_placeholder.png" class="round">
+       <img src="pages/2-0-request/images/Profile_avatar_placeholder.png" class="round">
        </div>
        <div class="names">
        <span class="firstname"></span>
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         console.log("name not found")
                         document.querySelector('.data').innerHTML  = `
                         <div class="img">
-                        <img src="Profile_avatar_placeholder.png" class="round">
+                        <img src="pages/2-0-request/images/Profile_avatar_placeholder.png" class="round">
                         </div>
                         <div class="names">
                         <span class="firstname"></span>

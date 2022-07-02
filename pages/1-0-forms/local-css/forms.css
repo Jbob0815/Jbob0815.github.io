@@ -25,7 +25,7 @@ h1 {
 body {
     margin: 0;
     background-color: var(--blue);
-    background-image: url(jellyfishtr.png);
+    background-image: url(pages/1-0-forms/images/jellyfishtr.png);
     background-size: 20% ;
     position: relative;
     overflow: hidden;
