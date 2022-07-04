@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             let sname =  document.querySelector('.input').value;
                 
-            fetch(`https://reqres.in/api/users?delay=1`)
+            fetch(`https://reqres.in/api/users?page=1`)
             .then(response =>  response.json())
             .then(data => {
                 

@@ -64,15 +64,17 @@ h1 {
 
 #logo {
 width: 200px;
+    margin-top: 30px;
 }
 
 ul img {
-    aspect-ratio: 1/1;
+    max-width: 100px;
     border-radius: 100%;
     padding: 4px;
     border: solid white 2px;
-    height: 8em;
+    height: 100px;
     overflow: hidden;
+    z-index: 1;
     object-fit: cover;
 }
 
@@ -84,8 +86,7 @@ ul img {
 
 p {
     color: white;
-    font-size: 1em;
-
+    font-size: .9em;
 }
 
 .container{
@@ -95,7 +96,7 @@ p {
     border-radius: 10px;
     box-shadow: 0 10px 20px -10px rgba(0, 0,0 , 0.75);
     text-align: center;
-    width: 225px;
+    width: 200px;
     padding: 20px;
     overflow: hidden;
     height: 200px;
