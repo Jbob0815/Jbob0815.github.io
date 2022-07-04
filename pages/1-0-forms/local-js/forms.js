@@ -7,10 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cs = code.style;
 
+    input.disabled = false;
+    code.disabled = false;
     submit.disabled = true;
 
     input.onkeyup = () => {
         input.style.opacity = `${100-input.value.length*10}%`
+        if(input.value.length >= 10){
+            input.disabled = true;
+        }
     }
  
 
@@ -21,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if(code.value.length >= 10){
             cs.transition = `1.5s`
-            cs.transform = `translateY(400px) rotate(-90deg)`
+            code.disabled = true;
+            cs.transform = `translateY(60vh) rotate(-90deg)`
             cs.transitionTimingFunction = `cubic-bezier(.44,-0.02,.84,.43)`; 
         };       
         
