@@ -42,6 +42,7 @@ body::before {
     background: url("../images/SVG+RamStick.svg") space;
     transform: rotate(30deg);
     overflow: hidden;
+    position: fixed;
 }
 
 body {
@@ -49,7 +50,7 @@ body {
     background-color: var(--blue);
     background-size: 50vh;
     background-clip: border-box;
-    position: fixed;
+    position: static;
     overflow: hidden;
     width: 100%;
     min-height: 100%;
