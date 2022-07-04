@@ -23,7 +23,7 @@ h1 {
     text-align: center;
     color: #ffffff ;
     font-family: Consolas,sans-serif;
-    font-size: 2.5em;
+    font-size: 2em;
     background-image: url("../images/SVG+chip.svg");
     background-position: center;
     background-size: contain;
@@ -41,6 +41,7 @@ body::before {
     z-index: -1;
     background: url("../images/SVG+RamStick.svg") space;
     transform: rotate(30deg);
+    overflow: hidden;
 }
 
 body {
@@ -48,10 +49,10 @@ body {
     background-color: var(--blue);
     background-size: 50vh;
     background-clip: border-box;
-    position: relative;
+    position: fixed;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100%;
 }
 
 .form {
@@ -74,7 +75,7 @@ body {
     color: white;
     font-size: 1.5em;
     height: 3vh;
-    width: 30vw;
+    min-width: 30vw;
     border: none;
     border-radius: 5px;
     transition: 100ms;
@@ -86,7 +87,7 @@ body {
     color: white;
     font-size: 1.5em;
     height: 3vh;
-    width: 30vw;
+    min-width: 30vw;
     border: none;
     border-radius: 10px;
     transition: 140ms;
@@ -99,7 +100,7 @@ body {
     font-size: 1.6em;
     border: none;
     border-radius: 5px;
-    width: 10vw;
+    min-width: 10vw;
     height: 4vh;
     margin-top: 5%;
     margin-left: auto;

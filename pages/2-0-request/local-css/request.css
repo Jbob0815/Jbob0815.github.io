@@ -11,6 +11,10 @@ body {
     align-items: center;
     justify-content: center;
     background: #28223f;
+    min-height: 100vh;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 *:focus {
     outline: none;
@@ -20,14 +24,13 @@ body {
     background: #231e39;
     margin: 10px;
     border-radius: 20px;
-    width:auto;
+    width: auto;
     margin: 50px;
     background: #231e39;
     border-radius: 10px;
     box-shadow: 0 10px 20px -10px rgba(0, 0,0 , 0.75);
-    color: b3b8cd;
+    color: #b3b8cd;
     text-align: center;
-    width: auto;
     padding: 20px;
 }
 
