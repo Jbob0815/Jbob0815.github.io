@@ -4,14 +4,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jakob N</title>
     <link rel="stylesheet" href="pages/0-0-index/local-css/index.css">
+    <link rel="stylesheet" href="ressources/style/nav.css">
+    <script defer src="ressources/scripts/nav.js"></script>
 </head>
 <body>
-<img src="pages/0-0-index/images/JN-logo.svg">
-    <nav>
-        <a href="1-0-forms.html" title="Forms">Forms</a>
-        <a href="2-0-request.html" title="Request">Request</a>
-        <a href="3-0-list.html" title="List">List</a>
-    </nav>
+
+<header class="primary-header">
+
+<img src="pages/0-0-index/images/JN-logo.svg" class="logo" alt="Logo">
+ <button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle"></button>
+<nav>
+    <ul id="primary-nav" data-visible="false">
+        <li>
+            <a href="1-0-forms.html">Forms</a>
+        </li>
+        <li>
+            <a href="2-0-request.html">Request</a>
+        </li>
+        <li>
+            <a href="3-0-list.html">List</a>
+        </li>
+    </ul>
+</nav>
+</header>
+
 <div class="about_me">
  <p>About me <br> Some Text</p>
 </div>
