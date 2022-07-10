@@ -33,7 +33,7 @@ h1 {
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     width: 200%;
     height: 200%;
     top: -50%;
@@ -42,7 +42,6 @@ body::before {
     background: url("../images/SVG+RamStick.svg") space;
     transform: rotate(30deg);
     overflow: hidden;
-    position: fixed;
 }
 
 body {

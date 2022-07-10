@@ -1,4 +1,7 @@
 
+*{
+    margin: 0;
+}
 .logo {
     width: 5rem;
     position: relative;
@@ -46,7 +49,7 @@
     .nav-toggle{
         padding: 0;
         display: block;
-        position: absolute;
+        position: fixed;
         right: 2rem;
         top: 2rem;
         background: url("../images/menu.svg") no-repeat ;
