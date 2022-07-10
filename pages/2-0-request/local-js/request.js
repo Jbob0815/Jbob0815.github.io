@@ -1,31 +1,11 @@
-/*
-let data = []
 
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://reqres.in/api/users?page=1", true);
-xhr.onload = function(){
-    console.log(JSON.parse(xhr.responseText).data);
-    data.push(JSON.parse(xhr.responseText).data)
-};
-xhr.send();
-
-console.log(data)
-*/
 document.addEventListener('DOMContentLoaded', () => {
     
     document.querySelector('form').onsubmit = () => {
        
        let names = []
 
-       document.querySelector('.data').innerHTML  = `
-       <div class="img">
-       <img src="pages/2-0-request/images/Profile_avatar_placeholder.png" class="round">
-       </div>
-       <div class="names">
-       <span class="firstname"></span>
-       <span class="lastname"><br></span>
-       <span class="email">Loading...</span>
-       </div>`
+
 
         const fetchdata = async() => {
 
@@ -49,29 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 for(let a = 0; a< 12 ;a++) {
                     
                     if(data.data[a].first_name == sname){
-                        document.querySelector('.data').innerHTML  = `
-                        <div class="img">
-                        <img src="${data.data[a].avatar}" class="round">
-                        </div>
-                        <div class="names">
-                        <span class="firstname">${data.data[a].first_name}</span>
-                        <span class="lastname">${data.data[a].last_name}<br></span>
-                        <span class="email">${data.data[a].email}</span>
-                        </div>`
+                        document.querySelector('.round').src  = `${data.data[a].avatar}`
+                        document.querySelector('.firstname').innerHTML = `${data.data[a].first_name}`
+                        document.querySelector('.lastname').innerHTML = `${data.data[a].last_name}`
+                        document.querySelector('.email').innerHTML = `${data.data[a].email}`;
                         console.log(`found!`)
                         return false
                     } else {
                         console.log("name not found")
-                        document.querySelector('.data').innerHTML  = `
-                        <div class="img">
-                        <img src="pages/2-0-request/images/Profile_avatar_placeholder.png" class="round">
-                        </div>
-                        <div class="names">
-                        <span class="firstname"></span>
-                        <span class="lastname">Error<br></span>
-                        <span class="email">No search result!</span>
-                        </div>`
-                    }   
+                        document.querySelector('.firstname').innerHTML = `Error`
+                        document.querySelector('.lastname').innerHTML = `Name not found`
+                        document.querySelector('.email').innerHTML = `-`
+                    }
                 }
                 })
                 
@@ -82,4 +51,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return false   
     }
 
+    const container = document.querySelector('.container');
+    const data = document.querySelector('.data');
+
+    const img = document.querySelector(".img img");
+    const circle = document.querySelector('.img div')
+    const heading = document.querySelector(".names h1 ")
+    const names = document.querySelector('.names')
+
+    container.addEventListener("mousemove", (e) => {
+        let yAxis = (window.innerWidth /2  - e.pageX) / 25;
+        let xAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        data.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
+    });
+
+
+    container.addEventListener('mouseenter', e => {
+
+
+
+        img.style.transform = "translateZ(150px)";
+        names.style.transform = 'translateZ(60px)';
+        circle.style.transform = 'translateZ(75px)';
+
+
+        data.style.transition = ' none'
+
+    })
+
+    container.addEventListener('mouseleave', e => {
+        data.style.transition = 'all 0.2s ease-in';
+        data.style.transform = 'rotate(0deg)';
+        img.style.transform = "translateZ(0px)";
+        names.style.transform = 'translateZ(0px)';
+        circle.style.transform = 'translateZ(0px)';
+
+    })
+
 })
+

@@ -9,63 +9,92 @@ body {
     font-family: sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: #28223f;
+    justify-content: flex-start;
     min-height: 100vh;
-    align-content: flex-start;
+    align-content: center;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+
+
 }
 *:focus {
     outline: none;
 }
 
 .form {
-    background: #231e39;
     width: auto;
     margin: 50px;
     border-radius: 10px;
-    box-shadow: 0 10px 20px -10px rgba(0, 0,0 , 0.75);
-    color: #b3b8cd;
+    box-shadow: 0 10px 20px -10px rgba(0, 0,0 , 0.75), 0 0 30px rgba(0,0,0,0.2);
     text-align: center;
     padding: 20px;
 }
 
 .submit,.input {
-    background: #231e39;
-    top: 60%;
-    color: white;
     position: relative;
-    border: none; 
-
+    border: none;
+    background: none;
 }
 
-.round {
-    max-width: 100px;
-    border-radius: 100%;
-    padding: 4px;
-    border: solid white 2px;
-    height: 100px;
-    overflow: hidden;
-    z-index: 1;
-    object-fit: cover;
+.container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.data {
+    min-height: 70vh;
+    transform-style: preserve-3d;
+    width: 35rem;
+    border-radius: 30px;
+    transition: transform 200ms;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0 0 50px rgba(0,0,0,0.2);
+}
+
+.img{
+    display: flex;
+    transform-style: preserve-3d;
+    align-items: center;
+    min-height: 35vh;
+    justify-content: center;
+    margin-top: 30px;
+    transition: inherit;
+}
+
+.img img{
+    display: flex;
+    width: 20rem;
+    aspect-ratio: 1;
+    transition: inherit;
+    border-radius: 50%;
+}
+
+.circle{
+    transition: inherit;
+    width: 22rem;
+    height: 22rem;
+    border: black 4px solid;
+    border-radius: 50%;
+    padding: 9px;
+    position: absolute;
 }
 
 .names {
-    color: white;
-    text-align: center;
-    z-index: 1;
+    font-family: sans-serif;
+    transition: inherit;
+    margin: 3rem 2rem;
 }
 
-.data{
-    position: relative;
-    margin: 50px;
-    background: #231e39;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px -10px rgba(0, 0,0 , 0.75);
-    text-align: center;
-    width: auto;
-    min-width: 210px;
-    padding: 20px;
-    overflow: hidden;
+.names span{
+    font-size: 2rem;
+    padding-inline: 10px;
+}
+
+ h1 , h2 {
+    font-family: sans-serif;
+    font-size: 2em;
+    color: grey;
+     margin-top: 20px;
 }
