@@ -3,11 +3,17 @@
     src: url("../../../global/fonts/Consolas.ttf");
 }
 
+*{
+    margin: 0;
+}
+
 body {
     background: linear-gradient(to bottom, #0083c9,white);
     height: 100vh;
     align-content: center;
     text-align: center;
+    font-family: Consolas,sans-serif;
+    margin: 0;
 }
 
 a {
@@ -17,7 +23,6 @@ a {
     float: right;
     font-size: 2em;
     color: white;
-    font-family: Consolas;
 }
 
 .about_me {
@@ -39,12 +44,4 @@ p {
     margin-right: auto;
     font-size: 6ch;
     position: relative;
-}
-
-img {
-    width: 8vh;
-    display: flex;
-    position: absolute;
-    top: 3vh;
-    left: 3vw;
 }
