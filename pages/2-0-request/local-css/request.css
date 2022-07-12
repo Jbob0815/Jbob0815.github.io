@@ -85,6 +85,7 @@ body {
     font-family: sans-serif;
     transition: inherit;
     margin: 3rem 2rem;
+    transform-style: preserve-3d;
 }
 
 .names span{

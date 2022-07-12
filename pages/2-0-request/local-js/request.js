@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 for(let a = 0; a< 12 ;a++) {
                     
-                    if(data.data[a].first_name == sname){
+                    if(data.data[a].first_name === sname){
                         document.querySelector('.round').src  = `${data.data[a].avatar}`
                         document.querySelector('.firstname').innerHTML = `${data.data[a].first_name}`
                         document.querySelector('.lastname').innerHTML = `${data.data[a].last_name}`
@@ -62,19 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
     container.addEventListener("mousemove", (e) => {
         let yAxis = (window.innerWidth /2  - e.pageX) / 25;
         let xAxis = (window.innerHeight / 2 - e.pageY) / 25;
-        data.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
+        data.style.transform = `rotateY(${yAxis}deg) rotateX(${-xAxis}deg)`;
     });
 
 
     container.addEventListener('mouseenter', e => {
-
-
-
         img.style.transform = "translateZ(150px)";
         names.style.transform = 'translateZ(60px)';
         circle.style.transform = 'translateZ(75px)';
-
-
         data.style.transition = ' none'
 
     })
