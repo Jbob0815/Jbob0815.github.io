@@ -1,47 +1,100 @@
 @font-face {
     font-family: Cosolas;
-    src: url("../../../global/fonts/Consolas.ttf");
+    src: url("/global/fonts/Consolas.ttf");
+}
+@font-face {
+    font-family: Poppins;
+    src: url("/global/fonts/Poppins-Regular.ttf");
+}
+
+:root {
+    --white_glass: linear-gradient(to right bottom,rgba(255,255,255,1),rgba(255,255,255,0.5));
+    --gradient1: linear-gradient(to right top, #65dfc9 ,#6cdbeb);
+    --glass: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+
 }
 
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(to bottom, #0083c9,white);
-    height: 100vh;
-    align-content: center;
-    text-align: center;
     font-family: Consolas,sans-serif;
-    margin: 0;
-}
-
-a {
-    margin-inline: 2vw;
-    text-decoration: none;
-    display: flex;
-    float: right;
-    font-size: 2em;
-    color: white;
-}
-
-.about_me {
-    display: flex;
-    position: relative;
-    text-align: center;
-    align-content: center;
-    width: 50vw;
-    left: 50%;
-    top: 20vh;
-    transform: translate(-50%,0);
+    overflow-x: hidden;
 }
 
 p {
-    font-family: Consolas;
+    font-family: Consolas, sans-serif;
     color: white;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     font-size: 6ch;
     position: relative;
+}
+a {
+    margin-inline: 2vw;
+    text-decoration: none;
+    display: flex;
+    float: left;
+    font-size: 2em;
+    color: #658ec6;
+}
+
+main {
+    min-height: 100vh;
+    background: var(--gradient1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass {
+    background: var(--glass);
+    min-height: 80vh;
+    width: max(35rem,60%);
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(1rem);
+    overflow: hidden;
+    margin: 5%;
+}
+
+.circle1, .circle2 {
+    position: absolute;
+    overflow: hidden;
+    aspect-ratio: 1;
+    width: 20rem;
+    background: var(--white_glass);
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+
+@media (max-width: 950px) {
+
+    .circle1, .circle2 {
+        width: 10rem;
+    }
+
+    .glass {
+        overflow: hidden;
+    }
+}
+
+#me {
+    aspect-ratio: 1;
+    height: 10rem;
+    border-radius: 50%;
 }

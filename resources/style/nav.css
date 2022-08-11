@@ -1,23 +1,69 @@
+@font-face {
+    font-family: Poppins;
+    src: url("/global/fonts/Poppins-Regular.ttf");
+}
 
 *{
     margin: 0;
+    transition: transform 230ms ease-out;
+
 }
+
+a {
+    margin-left: 0;
+}
+
+h1 {
+    color: #426696;
+    font-size: 1.3rem;
+}
+
+h2 {
+    color: #658ec6;
+    font-size: 1rem;
+}
+
+#me {
+    aspect-ratio: 1;
+    height: 7rem;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .logo {
     width: 5rem;
     position: relative;
+    margin: 1rem;
 }
 
-.primary-header {
+.nav-div {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
+}
 
+#nav-ul{
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
 }
 
 #primary-nav {
     display: flex;
     list-style: none;
     font-size: 1em;
+    min-height: 80vh;
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    width: max(10rem,20rem);
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: min(10vh,10rem) 2rem;
+    backdrop-filter: blur(.5rem);
 }
 
 .nav-toggle {
@@ -25,20 +71,24 @@
     position: absolute;
 }
 
-@media (max-width: 500px) {
+.nav-box {
+    display: flex;
+    align-content: center;
+    width: 15rem;
+    background: linear-gradient(to right top, #65dfc9,#6cdbeb);
+    height: 6rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 2rem;
+    font-family: Poppins,sans-serif;
+}
+
+@media (max-width: 950px) {
     #primary-nav {
         position: fixed;
-        align-items: flex-start;
-        flex-direction: column;
-        padding: min(30vh,10rem) 2rem;
-
-        inset: 0 0 0 30%;
-        background: hsl(0 0% 10% / .75);
-        backdrop-filter: blur(.5rem);
+        inset: 0 50% 0 0;
         z-index: 98;
-
-        transform: translateX(100%);
-
+        transform: translateX(-100%);
         transition: transform 230ms ease-out;
     }
 
@@ -49,8 +99,8 @@
     .nav-toggle{
         padding: 0;
         display: block;
-        position: fixed;
-        right: 2rem;
+        position: absolute;
+        left: 2rem;
         top: 2rem;
         background: url("../images/menu.svg") no-repeat ;
         background-size: contain;
@@ -59,5 +109,4 @@
         aspect-ratio: 1;
         z-index: 99;
     }
-
 }
