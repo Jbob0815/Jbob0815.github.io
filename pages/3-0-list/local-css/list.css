@@ -1,6 +1,19 @@
+@font-face {
+    font-family: poppins;
+    src: url("/global/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: Consolas;
+    src: url("/global/fonts/Consolas.ttf");
+}
+
 :root{
     --p1: rgb(40,60,130);
     --p2: rgb(78,53,104);
+    --white_glass: linear-gradient(to right bottom,rgba(255,255,255,1),rgba(255,255,255,0.5));
+    --gradient1: linear-gradient(to right top, #00DBDE ,#FC00FF);
+    --glass: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+
 }
 
 * {
@@ -10,12 +23,12 @@
 }
 
 html {
-    background: linear-gradient(to bottom,var(--p1),var(--p1)50%,var(--p2));
+    background: var(--gradient1);
     min-height: 100%;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: poppins,sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,8 +49,6 @@ h1 {
     text-align: center;
     color: white;
     width: max-content;
-    margin-left: auto;
-    margin-right: auto;
     padding: 10px;
     margin-bottom: 30px;
     margin-top:20px;
@@ -81,7 +92,7 @@ ul img {
 
 .name {
     color: white;
-    font-family: sans-serif;
+    font-family: poppins,sans-serif;
     margin-top: 15px;
     font-size: 1.3em;
 }
@@ -94,13 +105,46 @@ p {
 .container{
     position: relative;
     margin: 10px;
-    background: #312540;
+    background: var(--glass);
     border-radius: 10px;
     box-shadow: 0 10px 20px -10px rgba(0, 0,0 , 0.75);
     text-align: center;
     width: 200px;
-    padding: 10px;
-    padding-top: 20px;
+     padding-top: 20px;
     overflow: hidden;
     height: 200px;
+    backdrop-filter: blur(1em);
+    transition: transform 90ms ease;
+}
+
+.container:hover {
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+    transform:scale(1.05);
+}
+
+.circle1, .circle2 {
+    position: absolute;
+    overflow: hidden;
+    aspect-ratio: 1;
+    width: 20rem;
+    background: var(--white_glass);
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 35%;
+    right: 15%;
+}
+.circle2 {
+    top: 95%;
+    left: 15%;
+}
+@media (max-width: 950px) {
+
+    .circle1, .circle2 {
+        width: 10rem;
+    }
 }
