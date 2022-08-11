@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "gitignore": "^0.7.0",
+    "three": "^0.142.0"
+  }
+}
