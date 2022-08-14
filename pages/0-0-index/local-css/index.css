@@ -34,6 +34,7 @@ p {
     font-size: 6ch;
     position: relative;
 }
+
 a {
     margin-inline: 2vw;
     text-decoration: none;
@@ -52,16 +53,20 @@ main {
 }
 
 .glass {
+    display: flex;
+    flex-direction: row;
+    min-height: max(80vh,33rem);
     background: var(--glass);
-    min-height: 80vh;
     width: max(35rem,60%);
     border-radius: 2rem;
     z-index: 2;
     backdrop-filter: blur(1rem);
     overflow: hidden;
     margin: 5%;
-}
+    align-content: center;
+    align-items: center;
 
+}
 .circle1, .circle2 {
     position: absolute;
     overflow: hidden;
@@ -91,10 +96,14 @@ main {
     .glass {
         overflow: hidden;
     }
+
+
 }
 
-#me {
-    aspect-ratio: 1;
-    height: 10rem;
-    border-radius: 50%;
+.content-div {
+    position: relative;
+    width: calc(200% - 22rem);
+    height:  max(calc(80vh - 2rem),33rem);
+    background: blue;
+    margin-inline: 2rem;
 }
