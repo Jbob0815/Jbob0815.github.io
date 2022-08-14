@@ -9,6 +9,14 @@
 
 }
 
+#namespace {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+
 a {
     margin-left: 0;
 }
@@ -23,12 +31,23 @@ h2 {
     font-size: 1rem;
 }
 
+li img {
+    height: 3rem;
+    margin-right: 2ch;
+}
+
+ul[id=nav-ul] li {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
 #me {
     aspect-ratio: 1;
-    height: 7rem;
+    height: 6rem;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1ch;
 }
 
 .logo {
@@ -40,8 +59,9 @@ h2 {
 .nav-div {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #nav-ul{
@@ -49,21 +69,21 @@ h2 {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-right: 2rem;
+
 }
 
 #primary-nav {
     display: flex;
     list-style: none;
     font-size: 1em;
-    min-height: 80vh;
-    background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
-    width: max(10rem,20rem);
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding: min(10vh,10rem) 2rem;
-    backdrop-filter: blur(.5rem);
+    height: max(80vh,35rem);
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.9),rgba(255,255,255,0.7));
+    width: 20rem;
+    /* align-items: center; */
+    padding: min(4vh,6rem) 2rem;
+    backdrop-filter: blur(0.5rem);
+    justify-content: center;
+    align-content: space-between;
 }
 
 .nav-toggle {
@@ -74,12 +94,12 @@ h2 {
 .nav-box {
     display: flex;
     align-content: center;
-    width: 15rem;
     background: linear-gradient(to right top, #65dfc9,#6cdbeb);
+    width: 15rem;
     height: 6rem;
     border-radius: 1rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-family: Poppins,sans-serif;
 }
 
