@@ -43,5 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('form').onsubmit = () => {
         submit.disabled = true;
+        return false
     }
 });
