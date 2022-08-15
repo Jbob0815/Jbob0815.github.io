@@ -103,6 +103,11 @@ ul[id=nav-ul] li {
     font-family: Poppins,sans-serif;
 }
 
+.nav-box:hover {
+    transform: scale(1.05);
+}
+
+
 @media (max-width: 950px) {
     #primary-nav {
         position: fixed;

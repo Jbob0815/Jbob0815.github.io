@@ -20,6 +20,9 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-y: hidden;
+}
 body {
     font-family: Consolas,sans-serif;
     overflow-x: hidden;
@@ -55,17 +58,15 @@ main {
 .glass {
     display: flex;
     flex-direction: row;
-    min-height: max(80vh,33rem);
+    height: max(80vh,33rem);
     background: var(--glass);
-    width: max(35rem,60%);
+    width: max(55rem,60%);
     border-radius: 2rem;
     z-index: 2;
     backdrop-filter: blur(1rem);
     overflow: hidden;
     margin: 5%;
     align-content: center;
-    align-items: center;
-
 }
 .circle1, .circle2 {
     position: absolute;
@@ -97,13 +98,63 @@ main {
         overflow: hidden;
     }
 
+    .content-div {
+        text-align: center;
+    }
+
 
 }
 
 .content-div {
     position: relative;
     width: calc(200% - 22rem);
-    height:  max(calc(80vh - 2rem),33rem);
-    background: blue;
-    margin-inline: 2rem;
+    height:  80vh;
+    margin-inline: 1rem;
+    overflow-x: scroll;
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    height: 10rem;
+    width: 100%;
+    background: white;
+    margin-block: 3rem;
+    align-items: flex-start;
+    align-content: center;
+    border-radius: 1rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    box-shadow: 0 10px 20px -10px rgb(0 0 0 / 75%);
+
+    padding: 2ch;
+}
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+display: none;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: hsla(70 70% 100% /0.5);
+    border-radius: 10%;
+    width: 5px;
+    height: 2px;
+    transition: background 200ms;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #658ec6;
+}
+
+::-webkit-scrollbar-corner {
+    background: none;
 }
