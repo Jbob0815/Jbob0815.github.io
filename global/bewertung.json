@@ -1,9 +1,11 @@
 {
   "Name" : "Jakob Nieß",
   "age" : 17,
+  "total_length": 4,
   "Bewertung"  : [
     {
       "id": 1,
+      "length": 4,
       "Bereich": "Arbeitsverhalten",
       "Interesse": 4.5,
       "Arbeitstempo": 4.5,
@@ -12,22 +14,25 @@
     },
     {
       "id": 2,
+      "length": 2,
       "Bereich": "Fähigkeiten",
       "Beobachtungsgabe": 5,
-      "Lernleistung": 5,
+      "Lernleistung": 5
     },
     {
       "id": 3,
-      "Bereich": "Soziales Verhalten",
+      "length": 4,
+      "Bereich": "Soziales-Verhalten",
       "Kontakt": 4,
       "Pünktlichkeit": 5,
       "Verhältnis": 5,
-      "Beobachten": 5,
+      "Beobachten": 5
     },
     {
       "id": 4,
+      "length": 1,
       "Bereich": "Entwicklung",
-      "Bewertung": 4.75
+      "Entwicklung": 4.75
     }
   ]
 }
