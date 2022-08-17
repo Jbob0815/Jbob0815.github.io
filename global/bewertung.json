@@ -7,32 +7,40 @@
       "id": 1,
       "length": 4,
       "Bereich": "Arbeitsverhalten",
+      "data" : {
       "Interesse": 4.5,
       "Arbeitstempo": 4.5,
       "Belastbarkeit": 4.5,
       "Arbeitsweise": 5
+      }
     },
     {
       "id": 2,
       "length": 2,
       "Bereich": "Fähigkeiten",
+      "data": {
       "Beobachtungsgabe": 5,
       "Lernleistung": 5
+      }
     },
     {
       "id": 3,
       "length": 4,
       "Bereich": "Soziales-Verhalten",
+      "data": {
       "Kontakt": 4,
       "Pünktlichkeit": 5,
       "Verhältnis": 5,
       "Beobachten": 5
+      }
     },
     {
       "id": 4,
       "length": 1,
       "Bereich": "Entwicklung",
+      "data": {
       "Entwicklung": 4.75
+      }
     }
   ]
 }
