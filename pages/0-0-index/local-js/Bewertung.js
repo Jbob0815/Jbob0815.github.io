@@ -7,30 +7,30 @@ fetch("global/bewertung.json")
     const listitems = data.Bewertung.map(el =>{
         return `<div class="card">
             <h1>${el.Bereich}</h1>
-            <div class="${el.Bereich}"></div>
+            <div class="${el.Bereich} graph-content"></div>
             </div>`
     })
 
 
     const interesse = data.Bewertung[0].data.map(el => {
         return `<h2>${el.name}</h2>
-                <div class="graph ${el.bw}" data-bw="${el.bw}"></div>`
+                <div class="graph ${el.bw}"><div class="graph-after" style="left:${el.bw /0.05}%"></div></div>`
 
     });
 
     const fahigkeiten = data.Bewertung[1].data.map(el => {
         return `<h2>${el.name}</h2>
-                <div class="graph" style="--prozent: ${el.bw}"></div>`
+                <div class="graph"><div class="graph-after" style="left:${el.bw /0.05}%"></div></div>`
 
     })
     const social = data.Bewertung[2].data.map(el => {
         return `<h2>${el.name}</h2>
-                <div class="graph" data-bw="${el.bw /0.05}%"></div>`
+                <div class="graph"><div class="graph-after" style="left:${el.bw /0.05}%"></div></div>`
 
     })
     const entwicklung = data.Bewertung[3].data.map(el => {
         return `<h2>${el.name}</h2>
-                <div class="graph" data-bw="${el.bw}"></div>`
+                <div class="graph"><div class="graph-after" style="left:${el.bw /0.05}%"></div></div>`
 
     })
 
