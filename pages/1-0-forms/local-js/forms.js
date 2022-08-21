@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
  
 
-    code.onkeyup = () => {
+    code.onkeyup = function() {
 
         cs.transition =  `140ms`
         cs.transform = `rotate(${-2*code.value.length}deg)`

@@ -7,40 +7,72 @@
       "id": 1,
       "length": 4,
       "Bereich": "Arbeitsverhalten",
-      "data" : {
-      "Interesse": 4.5,
-      "Arbeitstempo": 4.5,
-      "Belastbarkeit": 4.5,
-      "Arbeitsweise": 5
-      }
+      "data" : [
+    {
+      "name": "Interesse",
+      "bw": 4.5
     },
+    {
+      "name": "Arbeitstempo",
+      "bw": 4.5
+    },
+    {
+      "name": "Belastbarkeit",
+      "bw": 4.5
+    },
+    {
+      "name": "Arbeitsweise",
+      "bw": 4.5
+    }
+    ]},
     {
       "id": 2,
       "length": 2,
-      "Bereich": "Fähigkeiten",
-      "data": {
-      "Beobachtungsgabe": 5,
-      "Lernleistung": 5
-      }
+      "Bereich": "Fahigkeiten",
+      "data": [
+    {
+      "name": "Beobachtungsgabe",
+      "bw": 5
+    },
+    {
+      "name": "Lernleistung",
+      "bw": 5
+    }
+      ]
     },
     {
       "id": 3,
       "length": 4,
       "Bereich": "Soziales-Verhalten",
-      "data": {
-      "Kontakt": 4,
-      "Pünktlichkeit": 5,
-      "Verhältnis": 5,
-      "Beobachten": 5
-      }
+      "data": [
+    {
+      "name": "Kontakt",
+      "bw": 4
+    },
+    {
+      "name": "Pünktlichkeit",
+      "bw": 5
+    },
+    {
+      "name": "Verhältnis",
+      "bw": 5
+    },
+    {
+      "name": "Beobachten",
+      "bw": 5
+    }
+      ]
     },
     {
       "id": 4,
       "length": 1,
       "Bereich": "Entwicklung",
-      "data": {
-      "Entwicklung": 4.75
-      }
+      "data": [
+    {
+      "name": "Entwicklung" ,
+      "bw": 4.75
+    }
+      ]
     }
   ]
 }
