@@ -2,7 +2,6 @@
 fetch("global/bewertung.json")
 .then(data => data.json())
 .then(data => {
-    console.log(data.Bewertung[1].data)
 
     const listitems = data.Bewertung.map(el =>{
         return `<div class="card">
@@ -43,9 +42,7 @@ fetch("global/bewertung.json")
     }
     join()
 
-
-
-
-
-
 })
+
+
+
